@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
+import getELO from '../components/getELO';
 
 const IdForm = ({ onSubmit }) => {
   const [id, setId] = useState('');
@@ -21,7 +22,12 @@ const IdForm = ({ onSubmit }) => {
           required
         />
       </label>
-      <button type="submit">Consultar Arquivo</button>
+      <button 
+        type="submit"
+        onClick={getELO}
+      >
+        Consultar Arquivo
+      </button>
     </form>
   );
 };
